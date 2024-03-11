@@ -13,7 +13,7 @@ base_models = ["pile_300B"]
 # merging one at a time
 models_to_merge_in = ["slimp_300B", "slimp_300B_from_pile_replay5", "german_200B", "german_200B_from_pile_replay25"]
 densities = [0.05, 0.25, 0.50, 0.75, 0.95]
-assert all(0 <= density <= 1 for density in densities), "Densities must be < 1."
+assert all(0 <= density <= 1 for density in densities), "Densities must be between 0 and 1."
 
 if model_size == "410M":
     model_paths = {
